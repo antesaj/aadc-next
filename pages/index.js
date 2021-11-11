@@ -6,7 +6,9 @@ import ReactMarkdown from 'react-markdown';
 export default function Home({ post }) {
   return (
     <div className={styles.container}>
-      <ReactMarkdown children={post.content} />
+      <ReactMarkdown>
+        {post.content}
+      </ReactMarkdown>
     </div>
   )
 }
