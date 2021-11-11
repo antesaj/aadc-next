@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import ReactMarkdown from 'react-markdown';
 
 export default function Home({ post }) {
   return (
     <div className={styles.container}>
-      <p>{JSON.stringify(post.content)}</p>
+      <ReactMarkdown children={post.content} />
     </div>
   )
 }
